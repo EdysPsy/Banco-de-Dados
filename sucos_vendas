@@ -10,4 +10,12 @@ SELECT * FROM tabela_de_produtos
 
 WHERE CODIGO_DO_PRODUTO = '1000889';
 SELECT * FROM tabela_de_produtos 
-WHERE SABOR = 'Uva';
+WHERE SABOR = 'Uva';  
+
+WHERE preco_de_lista = 8.41;
+
+SELECT * FROM tabela_de_produtos 
+WHERE preco_de_lista  > 8.40  
+
+SELECT * FROM tabela_de_produtos       
+WHERE preco_de_lista BETWEEN 8.40 AND 8.50;
