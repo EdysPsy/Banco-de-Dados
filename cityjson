@@ -1,0 +1,27 @@
+SELECT * FROM countryinfo;
+SELECT * FROM countryinfo 
+WHERE _ID = 'BRA';
+
+SELECT JSON_KEYS(doc) FROM countryinfo 
+WHERE _ID = 'BRA';
+
+SELECT JSON_KEYS(doc,"$.geography.Continent") FROM countryinfo 
+WHERE _ID = 'BRA';
+
+
+SELECT JSON_EXTRACT(doc,"$.IndepYear") FROM countryinfo 
+WHERE _id = 'BRA';
+
+SELECT JSON_EXTRACT(doc,"$.government") FROM countryinfo 
+WHERE _id = 'BRA';
+
+SELECT JSON_EXTRACT(doc,"$.geography.Continent") AS Continent
+WHERE _id = 'BRA';
+
+
+SELECT 
+    JSON_EXTRACT(doc, "$.geography.Continent") AS CONTINENT, -- Adicionada a vírgula aqui
+    JSON_EXTRACT(doc, "$.demographics.Population") AS POPULACAO
+FROM 
+    countryinfo;
+
